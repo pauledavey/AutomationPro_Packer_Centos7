@@ -33,7 +33,7 @@
 	  ],
 	  "network_adapters": [
 		  {
-			"network": "10.0.10.0/24",
+			"network": "192.168.100.0/24",
 			"network_card": "vmxnet3"
 		  }
 	  ]
