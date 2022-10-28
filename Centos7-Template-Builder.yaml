@@ -61,8 +61,8 @@ stages:
           - apk add xorriso
           - ''
           - ./packer build -force -var 'vsphere_password=${var.vcenter_password}' -var 'ssh_password=${var.ssh_password}'
-            -var 'ssh_username=root' -var 'vsphere_datastore=ds-iscsi-02' -var 'vsphere_datacenter=AutomationPro'
-            -var 'vsphere_vcenter=aprovc1.automationpro.lan' -var 'vsphere_username=administrator@vsphere.local'
+            -var 'ssh_username=root' -var 'vsphere_datastore=ds-iscsi-021' -var 'vsphere_datacenter=AutomationPro.lan'
+            -var 'vsphere_vcenter=aprovc1002.automationpro.lan' -var 'vsphere_username=administrator@vsphere.local'
             -var 'cd_path=${input.REPO_FOLDER}' ${input.REPO_FOLDER}/centos-simple.json
           export: [
             ]
@@ -76,8 +76,8 @@ stages:
         input:
           steps:
           - ./packer validate -var 'vsphere_password=${var.vcenter_password}' -var 'ssh_password=${var.ssh_password}'
-            -var 'ssh_username=root' -var 'vsphere_datastore=ds-iscsi-02' -var 'vsphere_datacenter=AutomationPro'
-            -var 'vsphere_vcenter=aprovc1.automationpro.lan' -var 'vsphere_username=administrator@vsphere.local'
+            -var 'ssh_username=root' -var 'vsphere_datastore=ds-iscsi-021' -var 'vsphere_datacenter=AutomationPro.lan'
+            -var 'vsphere_vcenter=aprovc1002.automationpro.lan' -var 'vsphere_username=administrator@vsphere.local'
             -var 'cd_path=${input.REPO_FOLDER}' ${input.REPO_FOLDER}/centos-simple.json
           export: [
             ]
